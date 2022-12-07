@@ -20,7 +20,7 @@ class Plat
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $libellé;
+    private $libelle;
 
     /**
      * @ORM\Column(type="integer")
@@ -32,14 +32,14 @@ class Plat
         return $this->id;
     }
 
-    public function getLibellé(): ?string
+    public function getlibelle(): ?string
     {
-        return $this->libellé;
+        return $this->libelle;
     }
 
-    public function setLibellé(string $libellé): self
+    public function setlibelle(string $libelle): self
     {
-        $this->libellé = $libellé;
+        $this->libelle = $libelle;
 
         return $this;
     }

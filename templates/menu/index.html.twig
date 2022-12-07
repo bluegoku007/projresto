@@ -1,4 +1,3 @@
-{% extends 'base.html.twig' %}
 
 {% block title %}Menu index{% endblock %}
 
@@ -9,7 +8,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Libellé</th>
+                <th>libelle</th>
                 <th>Id_restaurant</th>
                 <th>actions</th>
             </tr>
@@ -18,7 +17,7 @@
         {% for menu in menus %}
             <tr>
                 <td>{{ menu.id }}</td>
-                <td>{{ menu.libellé }}</td>
+                <td>{{ menu.libelle }}</td>
                 <td>{{ menu.idRestaurant }}</td>
                 <td>
                     <a href="{{ path('app_menu_show', {'id': menu.id}) }}">show</a>

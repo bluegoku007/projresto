@@ -1,5 +1,3 @@
-{% extends 'base.html.twig' %}
-
 {% block title %}Plat index{% endblock %}
 
 {% block body %}
@@ -9,7 +7,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Libellé</th>
+                <th>libelle</th>
                 <th>Prix</th>
                 <th>actions</th>
             </tr>
@@ -18,7 +16,7 @@
         {% for plat in plats %}
             <tr>
                 <td>{{ plat.id }}</td>
-                <td>{{ plat.libellé }}</td>
+                <td>{{ plat.libelle }}</td>
                 <td>{{ plat.prix }}</td>
                 <td>
                     <a href="{{ path('app_plat_show', {'id': plat.id}) }}">show</a>

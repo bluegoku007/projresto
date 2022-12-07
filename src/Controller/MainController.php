@@ -35,4 +35,13 @@ class MainController extends AbstractController
             'controller_name' => 'MainController',
         ]);
     }
+    /**
+     * @Route("/login1", name="app_main")
+     */
+    public function login1(): Response
+    {
+        return $this->render('main/login1.html.twig', [
+            'controller_name' => 'MainController',
+        ]);
+    }
 }

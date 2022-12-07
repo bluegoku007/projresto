@@ -37,6 +37,11 @@ class Restaurateur
      */
     private $mot_de_passe;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $num_tel;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Restaurateur
     public function setMotDePasse(string $mot_de_passe): self
     {
         $this->mot_de_passe = $mot_de_passe;
+
+        return $this;
+    }
+
+    public function getNumTel(): ?string
+    {
+        return $this->num_tel;
+    }
+
+    public function setNumTel(string $num_tel): self
+    {
+        $this->num_tel = $num_tel;
 
         return $this;
     }
