@@ -54,6 +54,11 @@ class Restaurant
      */
     private $Menu;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Reservation::class, inversedBy="resto")
+     */
+    private $nom_resto;
+
     public function __construct()
     {
         $this->Menu = new ArrayCollection();
@@ -162,6 +167,18 @@ class Restaurant
                 $menu->setRestaurant(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getNomResto(): ?Reservation
+    {
+        return $this->nom_resto;
+    }
+
+    public function setNomResto(?Reservation $nom_resto): self
+    {
+        $this->nom_resto = $nom_resto;
 
         return $this;
     }

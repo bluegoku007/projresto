@@ -26,12 +26,21 @@ class MainController extends AbstractController
             'controller_name' => 'MainController',
         ]);
     }
-    /**
-     * @Route("/admin", name="app_main")
+     /**
+     * @Route("/fam", name="app_main")
      */
-    public function admin(): Response
+    public function fam(): Response
     {
-        return $this->render('main/admin.html.twig', [
+        return $this->render('main/fam.html.twig', [
+            'controller_name' => 'MainController',
+        ]);
+    }
+    /**
+     * @Route("/adminn", name="app_main")
+     */
+    public function adminn(): Response
+    {
+        return $this->render('main/adminn.html.twig', [
             'controller_name' => 'MainController',
         ]);
     }
