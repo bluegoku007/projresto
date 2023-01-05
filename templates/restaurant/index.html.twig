@@ -38,6 +38,8 @@
             </tr>
             <td>actions</td><td>
                     <a href="{{ path('app_restaurant_show', {'id': restaurant.id}) }}">show</a>
+                    <a href="{{ path('app_menu_new',{'id_restaurant': restaurant.id})}}">Create new menu</a>
+                   <a href="{{ path('app_reservation_new'),{'id_restaurant': restaurant.id} }}">Create new reservation</a>
                     <a href="{{ path('app_restaurant_edit', {'id': restaurant.id}) }}">edit</a>
                    <a href="{{ path('app_restaurant_new') }}">Create new</a>
 

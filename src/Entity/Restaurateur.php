@@ -95,15 +95,5 @@ class Restaurateur
         return $this;
     }
 
-    public function getNumTel(): ?string
-    {
-        return $this->num_tel;
-    }
-
-    public function setNumTel(string $num_tel): self
-    {
-        $this->num_tel = $num_tel;
-
-        return $this;
-    }
+    
 }
